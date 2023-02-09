@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.div-mision{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px auto;
+}
+.div-mision div{
+    width: 48%;
+}
+.cont-1{
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    background: rgb(120, 121, 61);
+    padding: 8px;
+    color: white;
+    /* background: rgb(30, 216, 30); */
+}
+.ul-lista{
+    margin: 10px 10px;
+}
+.ul-lista li{
+    text-decoration: none;
+    list-style: none;
+    width: 100%;
+}
+.lista{
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+}

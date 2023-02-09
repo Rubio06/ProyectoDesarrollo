@@ -1,0 +1,149 @@
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+body{
+	background: #f2f2f2;
+	font-family: 'Roboto', sans-serif;
+}
+.flex{
+	width: 100%;
+	height:100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.textos{
+	padding:300px;
+	color:#fff;
+	text-align: center;
+}
+.modal{
+	display: none;
+	position: fixed;
+	z-index:1;
+	overflow: auto;
+	left: 0;
+	top:0;
+	width: 100%;
+	height:100%;
+	background: rgba(0, 0, 0, 0.452);
+}
+.contenido-modal{
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	width: 60%;
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+	animation-name: modal;
+	animation-duration: 1s;
+}
+@keyframes modal{
+	from{top:-330px; opacity:0;}
+	to{top:0; opacity:1;}
+}
+.close{
+	color: #f2f2f2;
+	font-size:30px;
+	font-weight: bold;
+}
+.close:hover{
+	color:#7f8c8d;
+	text-decoration: none;
+	cursor: pointer;
+}
+.modal-header{
+	padding: 8px 16px;
+	background: #060224;
+	color:#f2f2f2;
+}
+p{
+	text-align: justify;
+    font-size: 14px;
+}
+.modal-body{
+	padding: 20px 16px;
+}
+@media screen and (max-width:900px){
+	.contenido-modal{
+		width: 70%;
+	}
+	.textos{
+		padding: 150px;
+	}
+}
+@media screen and (max-width:500px){
+	.textos{
+		padding:50px;
+	}
+}
+/* MODAL */
+.profesor{
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	width: 80%;
+	margin: auto;
+	height: 50px;
+}
+.profesor input{
+	padding: 5px;
+	
+}
+.container2 div{
+	height: 40px;
+	/* display: grid;
+    grid-template-columns: 1fr 1fr; */
+	display: flex;
+	justify-content: space-around;
+    width: 100%;
+    align-items: center;
+}
+input{
+	padding: 5px;
+}
+
+.boton{
+	width: 70%;
+	margin: auto;
+}
+.boton button{
+	width: 100%;
+	padding: 5px 5px;
+	border-radius: 5px;
+	font-weight:lighter;
+	justify-content: space-between;
+}
+
+/*BOD*/
+.p-parrafo{ 
+    text-align: center; 
+    margin: 10px; 
+    border-radius: 10px; 
+    font-size: 20px; 
+    color: #0a0729; 
+    line-height: 1.5;
+    /* color: #f7f4ef;  */
+}
+.btn-parrafo{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 25px;
+}
+.btn-parrafo button{
+    width: 22%;
+    font-size: 17px;
+    background: #072485;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    transition: 1s;
+}
+.btn-parrafo button:hover{
+    background: linear-gradient(45deg,rgb(51, 72, 167),rgb(75, 139, 91));    
+    text-decoration: underline;
+    outline: none;
+    transform: scale(1.03);
+}
