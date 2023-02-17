@@ -6,9 +6,7 @@
 body{
     font-family: Roboto;
     background: #f9f9f9;
-
 }
-
 /* HEADER */
 .div-header{
     width: 100%;
@@ -104,7 +102,7 @@ nav > a:hover{
     width: 92%;
     margin: 60px auto;
     justify-content: space-evenly;
-    border-bottom: 2px solid black;
+    /* border: 2px solid black; */
     padding-bottom: 50px;
 }
 .div-tercer div{
@@ -181,4 +179,165 @@ nav > a:hover{
     color:  #767676;
     line-height: 1.6;
 }
+.cuarta-bloque{
+    background: #014572;
+    color: white;
+}
+.top-triangulo{
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    border-left: 350px solid  transparent;
+    border-bottom: 100px solid  #014572;
+    border-right: 998px solid  transparent;
+}
+.botom-triangulo{
+    width: 100%;
+    height: 150px;
+    margin: auto;
+    border-left: 998px solid  transparent;
+    border-top: 100px solid  #014572;
+    border-right: 350px solid  transparent;
+}
+.titulo{
+    padding: 50px;
+    text-align: center;
+}
+.nuestros-planes{
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+}
+.nuestros-planes div{
+    padding: 7px;
+}
+.plan1{
+    width: 50%;
+    line-height: 1.5;
+}
+.plan1-icono, .plan2-icono{
+    width: 24%;
+}
+.plan1-texto, .plan2-texto{
+    display:flex; flex-direction: column; width: 76%;
+}
+.plan1 div{
+    display: flex;
+    justify-content: space-between;
+}
+.plan2{
+    display: flex;
+    width: 50%;
+    line-height: 1.5;
+}
+.plan2-ul1, .plan2-ul2{
+    margin:auto;
+    width: 92%; 
+    float:right;
+}
+/* QUINTO BLOQUE */
+.bloque-quinto{
+    width: 88%;
+    margin: auto;
+}
+
+.parrafo-h1{
+    margin: 30px 30px;
+    line-height: 1.5;
+}
+.parrafo-h1 p{
+    text-align: center;
+    color: #767676;;
+}
+.parrafo-h1 h1{
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+}
+h1 span{
+    color:#FA6742;
+}
+.circulo1{
+    height: 220px;
+    width: 220px;
+    border-radius: 55%;
+    display: flex;
+    background: #32cc73;
+    align-items: center;
+    margin:auto;
+}
+.circulo1 img{
+    width: 40%;
+    height: 40%;
+    margin: auto;
+}
+.circulo2{
+    height: 220px;
+    width: 220px;
+    border-radius: 55%;
+    display: flex;
+    background: #FA6742;
+    margin:auto;
+}
+.circulo2 img{
+    width: 30%;
+    height: 40%;
+    margin: auto;
+}
+.circulo3{
+    height: 220px;
+    width: 220px;
+    border-radius: 55%;
+    display: flex;
+    background: #007bff;
+    margin:auto;
+}
+.circulo3 img{
+    width: 40%;
+    height: 40%;
+    margin: auto;
+}
+.circulo4{
+    height: 220px;
+    width: 220px;
+    border-radius: 55%;
+    display: flex;
+    background: #ffc107;
+    margin:auto;
+}
+.circulo4 img{
+    width: 40%;
+    height: 40%;
+    margin: auto;
+}
+.div-circulos{
+    display: flex;
+    justify-content: space-between;
+}
+.flex-items1, .flex-items2, .flex-items3, .flex-items4{
+    height: 440px;
+    width: 24%;
+}
+.flex-items2, .flex-items4{
+    display: flex;
+    align-items: flex-end;
+}
+.circulo1-img p, .circulo2-img p, .circulo3-img p ,.circulo4-img p{
+    padding-top: 20px;
+    color:#2f2c2c;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.position{
+    margin: 50px 40px;
+}
+.position img{
+    width: 100%;
+}
+
+
+
+
 
