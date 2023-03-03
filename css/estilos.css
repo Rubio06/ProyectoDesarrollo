@@ -16,6 +16,7 @@ body{
     color: white;
     border: 2px solid white;
     transition: 1s;
+    cursor: pointer;
 
 }
 .btn-auditoria:hover{
@@ -59,12 +60,12 @@ body{
     display: flex;
     justify-content: space-between;
 }
-a{
+.amenu{
     color: #ffff;
     text-decoration: none;
     width: 50%;
 }
-a:hover{
+.amenu:hover{
     text-decoration: underline;
     color: #f3dddd9d;
 }
@@ -100,6 +101,7 @@ a:hover{
     outline: none;
     border: none;
     transition: 0.9s;
+    cursor: pointer;
 }
 .btn-header button:hover{
     background: #131a30e7;
@@ -169,6 +171,7 @@ a:hover{
     background: linear-gradient(45deg,rgb(51, 72, 167),rgb(75, 139, 91));
     animation: color 3s ease infinite;
     color: white;
+    cursor: pointer;
 }
 @keyframes color{
     50%{
@@ -466,6 +469,7 @@ h1 span{
     margin: auto;
 }
 .btn-detalles button{
+    cursor: pointer;
     width: 100%;
     padding: 10px;
     background: linear-gradient(45deg,rgb(51, 72, 167),rgb(75, 139, 91));
@@ -503,13 +507,12 @@ h1 span{
     color: #08104d;
 }
 .div-p{
-    position:sticky;
-    bottom: 40px; 
-    width: 15%;
+    position: fixed;
+    bottom: 40px;
+    width: 14.6%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    float: right;
 }
 .btn-wassap{
     width: 59%;
@@ -523,6 +526,7 @@ h1 span{
     cursor: pointer;
     display:flex;
     align-items: center;
+    text-decoration: none;
 }
 .btn-wassap i{
     background:#27A219; 
@@ -605,7 +609,6 @@ h1 span{
 .metodologia-rup{
     padding: 10px;
 }
-
 .metodologia-rup img{
     float: right;
     padding-left: 20px;
@@ -650,13 +653,162 @@ h1 span{
     padding: 10px;
 }
 .btn-form button{
-    background: #08104d;
+    background: rgba(5, 5, 59, 0.59);  
     border-radius: 10px;
     font-weight: bold;
     color: white;
     border:none;
     cursor: pointer;
 }
-.btn-form button:hover{
-    background: #08104de1;
+/* FOOTER GENERAL*/
+.footer-contenedor{
+    background: #222; 
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    padding: 85px 30px 40px 30px;
+}
+/* FOOTER 1*/
+.footer-1{
+    width:28%; 
+    border-right:4px solid white
+}
+.footer-1-a{
+    display: flex; 
+    width:75%; 
+    justify-content:space-between; align-items:center; 
+    margin:auto;
+    color:white
+}
+.footer-1-a i{
+    font-size: 30px;
+}
+.footer-1-b{
+    line-height:1.5; 
+    margin: 30px auto; 
+    width:85%;
+}
+.footer-1-b p{
+    text-align: center
+}
+
+.footer-1-c{
+    width:80%;
+    margin:10px auto 10px;
+}
+.footer-1-c textarea{
+    width:100%; 
+    resize:none; 
+    outline:none; 
+    padding: 10px;
+}
+.footer-1-d{
+    width:60%; 
+    margin:auto;
+}
+.footer-1-d button{
+    padding:10px; 
+    width:100%; 
+    font-size:16px; 
+    font-weight:bold; 
+    background: #1b4e91; 
+    color:white; 
+    outline:none; 
+    border:none; 
+    border-radius:5px; 
+    cursor:pointer;
+}
+
+/* /FOOTER2/ */
+.footer-2{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    height: 250px;
+    padding: 30px;
+}
+.footer-2 h2{
+    text-align: center;
+}
+.lista-footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.p-empresa{
+    font-weight:lighter;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.lista1{
+    display: flex;
+    width: 100%;
+}
+.listaA i{
+    width: 22%;
+}
+.lista1 i{
+    width: 20%;
+    font-size: 30px;
+}
+.lista1 p{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+.footer-2 li{
+    list-style: none;
+    margin-top: 20px;
+}
+
+/* /FOTTER 3/ */
+.footer-3{
+    border-left:3px solid white;
+    width: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.footer-3 h2{
+    text-align: center;
+    margin-top: -20px;
+
+    margin-bottom: 20px;
+}
+.footer-3-a{
+    width: 100%;
+}
+.footer-3 li{
+    list-style: none;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+/* /FOTTER 4/ */
+.footer-4{
+    width:8%;
+    display: flex;
+    align-items: center;
+}
+.iconos-final{
+    background: #222; 
+    color: white;
+    font-size: 33px;
+    display: flex;
+    justify-content: space-between;
+    width: 22%;
+    margin: auto;
+}
+.derechos{
+    height: 170px;
+    background: #222;
+    display: flex;
+    align-items:flex-end; 
+}
+.derechos p{
+    padding: 20px;
+    border-top: 3px solid white;
+    font-size: 16px;
+    color: white;
 }

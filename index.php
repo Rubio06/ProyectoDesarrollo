@@ -1,4 +1,7 @@
-
+<?php 
+    include("conexion/conexion.php");
+    $cn = Conectarse();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +22,6 @@
 <body>
     <?php include("modal.php"); ?>
     <div class="container">
-
         <div class="div-header">
             <nav class="nav-uls">
                 <div style="padding:5px; background:#DE8A00;">
@@ -28,8 +30,8 @@
                         <p style="color:honeydew; font-size: 15px;">CONSIGUE AHORA UNA AUDITORÍA DIGITAL GRATUITA DE TU
                             NEGOCIO</p>
                         <input type="text" placeholder="Introduce la web de tu negocio"
-                            style="width: 30%; font-style:italic; padding:8px; outline:none; border:none;">
-                        <button class="btn-auditoria">
+                            style="width: 30%; font-style:italic; padding:8px; outline:none; border:none;" id="sitio" name="sitio">
+                        <button class="btn-auditoria" onclick="mandarLink('listado')">
                             <h3>¡Comienza Auditoria!</h3>
                         </button>
                     </div>
@@ -38,11 +40,11 @@
                     <h1 style="width: 40%; text-align:left; color:white; font-size: 28px;">Máster web <i
                             class="fa-solid fa-computer" style="font-size: 30px;"></i></h1>
                     <ul class="ul">
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Sobre nosotros</a></li>
-                        <li><a href="#">Tecnologías</a></li>
-                        <li><a href="#">Servicios</a></li>
-                        <li><a href="#">Contactos</a></li>
+                        <li><a href="#" class="amenu">Inicio</a></li>
+                        <li><a href="#" class="amenu">Sobre nosotros</a></li>
+                        <li><a href="#" class="amenu">Tecnologías</a></li>
+                        <li><a href="#" class="amenu">Servicios</a></li>
+                        <li><a href="#" class="amenu">Contactos</a></li>
                     </ul>
                 </div>
             </nav>
@@ -589,25 +591,30 @@
                         </div>
                         <div>
                             <input type="email" id="email" name="email" placeholder="E-mail*" style="width: 100%;" require>
+                            <div id="resultEmail"></div>
                         </div>
                         <div style="display: flex; justify-content:space-between;">
-                            <input type="number" id="dni" name="dni" placeholder="Nro. de documento*" style="width:47%" require>
-                            <input type="number" id="celular" name="celular" placeholder="Celular*" style="width:47%" require>
+                            <input type="text" id="dni" name="dni" maxlength="8" placeholder="Nro. de documento*" style="width:47%" require>
+                            <input type="text" id="celular" maxlength="9" name="celular" placeholder="Celular*" style="width:47%" require>
                         </div>
                         <div>
                             <textarea name="comentario" id="comentario" cols="30" rows="7" style="width:100%;"
                                 placeholder="Comentarios*"></textarea>
                         </div>
                         <div style="display: flex; justify-content:space-evenly;">
-                            <input type="checkbox" id="terminos" name="terminos" onclick='enviar()'style="margin:auto;">
+                            <input type="checkbox" id="terminos" name="terminos" style="margin:auto;" onclick="checkBoton()">
                             <p style="width:85%">Autorizo el tratamiento de mis datos según los términos contenidos en
                                 el siguiente enlace</p>
                         </div>
                         <div style="width:50%;" class="btn-form">
-                            <button onclick="clientes('listado');"
-                                style="width:100%; padding:10px; font-size:17px;" onsubmit="return validarCampos();">Enviar</button>
+                            <button onclick="clientes()"
+                            disabled style="width:100%; padding:10px; font-size:17px;" id="btnclientes" onsubmit="return validarCampos();">Enviar</button>
                         </div>
-                        <div id="camposVacios">
+                        <div id="clientesRespuesta">
+                        </div>
+                        <div id="sugerencias">
+                        </div>
+                        <div id="sitios">
                         </div>
                     </div>
                 </div>
@@ -616,15 +623,78 @@
                 <img src="img/laptop.png" alt="" style="width: 100%; border-top-left-radius:50%; border-bottom-left-radius:50%;"">
             </div>
         </div>
-        <div class="div-p">
-            <a class="btn-wassap" href="https://api.whatsapp.com/send?phone=947204863">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <p style="padding:10px; text-align:center; font-size:17px; font-weight:bold;">Escribanos ...</p>
+        <div style="margin: 50px 0px 0px 0px;">
+            <footer>
+                <div class="footer-contenedor">
+                    <div class="footer-1">
+                        <div class="footer-1-a">
+                            <h1>Máster Web</h1>
+                            <i class="fa-solid fa-computer"></i>
+                        </div>
+                        <div class="footer-1-b">
+                            <p>En esta página se reserva los derechos de autor para los creadores de este contendio</p>
+                        </div>
+                        <div class="footer-1-c">
+                            <textarea name="sugerencias" id="sugerencias" cols="27" rows="5"></textarea>
+                        </div>
+                        <div class="footer-1-d">
+                            <button onclick="mandarSugerencias('listado');">Sugerencias</button>
+                        </div>
+                    </div>
+                    <div class="footer-2">
+                        <div class="lista-footer">
+                            <h2>Contáctenos en </h2>
+                            <?php 
+                                $sql = "SELECT * FROM infoempresa";
+                                $query = mysqli_query($cn,$sql);
+                                while($mostrar = mysqli_fetch_array($query)){
+                            ?>
+                            <li class="lista1"><i class="fa-solid fa-location-dot"></i><p class="p-empresa"><?php echo $mostrar['direccion']; ?></p></li>
+                            <li class="lista1"><i class="fa-solid fa-phone-volume"></i><p class="p-empresa"><?php echo $mostrar['telefono']; ?></p></li>
+                            <li class="lista1"><i class="fa-regular fa-envelope"></i><p class="p-empresa"><?php echo $mostrar['correo']; ?></p></li>
+                            <?php } ?>
+                        </div>
+                    </div>
+                    <div class="footer-3">
+                        <div class="footer-3-a">
+                            <h2>Mas información en </h2>
+                            <li>Téminos y condiciones</li>
+                            <li>Preguntas frecuentes</li>
+                            <li>Recomendaciones</li>
+                            <li>Aportes de trabajo</li>
+                        </div>
+                    </div>
+                    <div class="footer-4">
+                        <div>
+                            <img src="img/libro.png" alt="" style="width:100%;">
+                            <p style="text-align: center;">Libro de reclamaciones</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div style="background: #222; ">
+                <div class="iconos-final">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-behance"></i>
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </div>
+        </div>
+        <div class="derechos">
+            <p>© Copyright 2023, Máster Web. Todos los derechos reservados.</p>
+        </div>
+        <div style="display: flex; width: 14%; float:right;">
+            <div class="div-p">
+                <a class="btn-wassap" href="https://api.whatsapp.com/send?phone=947204863">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+                <p style="padding:10px; text-align:center; font-size:17px; font-weight:bold;">Escribanos ...</p>
+            </div>
         </div>
     </div>
     <script src="js/main.js"></script>
-    <!-- <script src="js/datos.js"></script> -->
 </body>
 
 </html>
