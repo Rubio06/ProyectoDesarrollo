@@ -4,6 +4,7 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,34 +19,59 @@
     <script src="https://kit.fontawesome.com/2356e8f8d0.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/modal.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
+
 <body>
     <?php include("modal.php"); ?>
     <div class="container">
         <div class="div-header">
             <nav class="nav-uls">
-                <div style="padding:5px; background:#DE8A00;">
-                    <div
-                        style="display:flex; align-items: center; justify-content: space-around; width: 82%; margin:auto;">
-                        <p style="color:honeydew; font-size: 15px;">CONSIGUE AHORA UNA AUDITORÍA DIGITAL GRATUITA DE TU
-                            NEGOCIO</p>
-                        <input type="text" placeholder="Introduce la web de tu negocio"
-                            style="width: 30%; font-style:italic; padding:8px; outline:none; border:none;" id="sitio" name="sitio">
-                        <button class="btn-auditoria" onclick="mandarLink('listado')">
-                            <h3>¡Comienza Auditoria!</h3>
-                        </button>
+                <div class="nav-1" style="padding:5px; background:#DE8A00;" >
+                    <div class="primerNav1" id="primerNav1">
+                        <div class="nav">
+                            <div class="cerrarMenu" id="cerrarMenu">
+                                <button id="btnCerrar"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+                            </div>
+                            <div class="primerNav">
+                                <p>CONSIGUE AHORA UNA AUDITORÍA DIGITAL GRATUITA DE TU
+                                    NEGOCIO</p>
+
+                                <input type="text" placeholder="Introduce la web de tu negocio" id="sitio" name="sitio">
+                                <button class="btn-auditoria" onclick="mandarLink('listado')">
+                                    <h3>¡Comienza Auditoria!</h3>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-menu1">
+                        <button class="btnAbrir" id="btnAbrir"><i class="fa-solid fa-bars"></i></button>
                     </div>
                 </div>
                 <div class="nav-ul">
-                    <h1 style="width: 40%; text-align:left; color:white; font-size: 28px;">Máster web <i
-                            class="fa-solid fa-computer" style="font-size: 30px;"></i></h1>
-                    <ul class="ul">
-                        <li><a href="#" class="amenu">Inicio</a></li>
-                        <li><a href="#" class="amenu">Sobre nosotros</a></li>
-                        <li><a href="#" class="amenu">Tecnologías</a></li>
-                        <li><a href="#" class="amenu">Servicios</a></li>
-                        <li><a href="#" class="amenu">Contactos</a></li>
-                    </ul>
+                    <div class="titulo-ul">
+                        <h1>Máster web</h1>
+                        <i class="fa-solid fa-computer" style="font-size: 35px;"></i>
+                    </div>
+                    <button class="btn-Abrir2" id="btn-Abrir2"><i class="fa-solid fa-bars"></i></button>
+
+                    <nav class="ul" id="ul">
+                        <div class="btn-cerrar2" id="btn-cerrar2">
+                            <button id="btnCerrar"><i class="fa-sharp fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div class="titulo-ul2">
+                            <h1>Máster web</h1>
+                            <i class="fa-solid fa-computer" style="font-size: 35px;"></i>
+                        </div>
+                        <ul>
+                            <li><a href="#" class="amenu">Inicio</a></li>
+                            <li><a href="#" class="amenu">Sobre nosotros</a></li>
+                            <li><a href="#" class="amenu">Tecnologías</a></li>
+                            <li><a href="#" class="amenu">Servicios</a></li>
+                            <li><a href="#" class="amenu">Contactos</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </nav>
             <section class="titulos-section">
@@ -66,7 +92,7 @@
             </div>
         </div>
         <!-- TERCER BLOQUE -->
-        <div class="div-tercer">
+        <div class="div-tercer" data-aos="zoom-in-down">
             <div class="img-tercer">
                 <div style="width: 70%; margin: auto;">
                     <img src="img/computadora.png" alt="">
@@ -82,7 +108,7 @@
         <!-- CUARTO BLOQUE -->
         <div class="div-desarrollo" style="background: #EFEFEF; width: 100%;">
             <div>
-                <img src="img/imagen2.png" alt="" class="img-sistemas1">
+                <img src="img/imagen2.png" alt="" class="img-sistemas1" data-aos="zoom-in">
                 <h2 class="titulo-desarrollo">Diseño de págima web</h2>
                 <p class="parrafo-desarrollo">Nuestro servicio de diseño de páginas web, es desarrollado con diferentes
                     tecnologías dependiendo del tipo de sitio de su elección. Nuestra empresa no se preocupa tan solo
@@ -91,7 +117,7 @@
                     botones para cotizar, botones de llamada y estadísticas.</p>
             </div>
             <div>
-                <img src="img/telefono.png" alt="" class="img-sistemas2">
+                <img src="img/telefono.png" alt="" class="img-sistemas2" data-aos="zoom-in">
                 <h2 class="titulo-desarrollo">Aplicaciónes moviles</h2>
                 <p class="parrafo-desarrollo">Tenemos un staff de profesionales competentes en el mundo del desarrollo
                     de aplicaciones móviles, manejando distintas herramientas para el desarrollo de estos tipos de
@@ -100,7 +126,7 @@
                     capacitados para tales proyectos de aplicaciones.</p>
             </div>
             <div>
-                <img src="img/escritorio.png" alt="" class="img-sistemas3">
+                <img src="img/escritorio.png" alt="" class="img-sistemas3" data-aos="zoom-in">
                 <h2 class="titulo-desarrollo">Programas de escritorio</h2>
                 <p class="parrafo-desarrollo">Gran parte del sector empresarial utilizan estos tipos de sistemas, la
                     ventaja de estos sistemas de información es que pueden funcionar sin la necesidad de conectarse a
@@ -114,7 +140,7 @@
         <div class="position">
             <img src="img/linea.png" alt="">
         </div>
-        <div class="bloque-quinto">
+        <div class="bloque-quinto"> 
             <div class="titulos-parrafos">
                 <div class="parrafo-h1">
                     <p>EN JB DEVELOPMENT DESARROLLAMOS SOFTWARE Y ESTO NOS APASIONA. CONVERTIMOS TU IDEA EN UNA APP
@@ -130,7 +156,7 @@
                 <div class="div-circulos">
                     <div class="flex-items1">
                         <div class="circulo1-img">
-                            <div class="circulo1">
+                            <div class="circulo1" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                 <img src="img/process1.png" alt="">
                             </div>
                             <p>01. Planeación y captación de los requerimientos técnicos para empezar el desarrollo del
@@ -139,7 +165,7 @@
                     </div>
                     <div class="flex-items2">
                         <div class="circulo2-img">
-                            <div class="circulo2">
+                            <div class="circulo2"  data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                 <img src="img/process2.png" alt="">
                             </div>
                             <p>02. Desarrollo de las ideas requeridas con todos los procesos de programación y
@@ -148,7 +174,7 @@
                     </div>
                     <div class="flex-items3">
                         <div class="circulo3-img">
-                            <div class="circulo3">
+                            <div class="circulo3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                                 <img src="img/process3.png" alt="">
                             </div>
                             <p>03. Implementación a modo de pruebas para validar posibles errores y cambio de
@@ -157,8 +183,8 @@
                     </div>
                     <div class="flex-items4">
                         <div class="circulo4-img">
-                            <div class="circulo4">
-                                <img src="img/process4.png" alt="">
+                            <div class="circulo4"  data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                                <img src="img/process4.png" alt="" >
                             </div>
                             <p>04. Implementación total y soporte en el tiempo acordado entre las partes por el
                                 producto.</p>
@@ -182,7 +208,7 @@
                 </marquee>
             </div>
             <div class="precios">
-                <div class="titulos-primer">
+                <div class="titulos-primer" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <div class="precios-titulos">
                         <p class="p-precios">Precios</p>
                         <h1>Planes de diseño de páginas web en Perú</h1>
@@ -297,7 +323,7 @@
                 <div class="plan1">
                     <div class="plan1-1">
                         <div class="plan1-icono">
-                            <i class="fa-solid fa-computer" style="font-size: 70px;"></i>
+                            <i class="fa-solid fa-computer"></i>
                         </div>
                         <div class="plan1-texto">
                             <h3>RESPONSIVO</h3>
@@ -308,7 +334,7 @@
                     </div>
                     <div>
                         <div class="plan1-icono">
-                            <i class="fa-sharp fa-solid fa-book-atlas" style="font-size: 70px;"></i>
+                            <i class="fa-sharp fa-solid fa-book-atlas"></i>
                         </div>
                         <div class="plan1-texto">
                             <h3>ESCALABLES</h3>
@@ -320,7 +346,7 @@
                     </div>
                     <div>
                         <div class="plan1-icono">
-                            <i class="fa-solid fa-text-slash" style="font-size: 70px;"></i>
+                            <i class="fa-solid fa-text-slash"></i>
                         </div>
                         <div class="plan1-texto">
                             <h3>TIPOGRAFIAS</h3>
@@ -332,7 +358,7 @@
                     </div>
                     <div>
                         <div class="plan1-icono">
-                            <i class="fa-solid fa-arrow-rotate-right" style="font-size: 70px;"></i>
+                            <i class="fa-solid fa-arrow-rotate-right"></i>
                         </div>
                         <div class="plan1-texto">
                             <h3>VELOCIDAD DE CARGA</h3>
@@ -344,10 +370,10 @@
                 </div>
                 <!-- plan2 -->
                 <div class="plan2">
-                    <div style="display: flex; flex-direction:column;">
-                        <div style="display:flex;">
-                            <div class="plan1-icono">
-                                <i class="fa-sharp fa-solid fa-ethernet" style="font-size: 70px;"></i>
+                    <div class="plan2-1">
+                        <div class="plan2-1-1">
+                            <div class="plan2-icono2">
+                                <i class="fa-sharp fa-solid fa-ethernet"></i>
                             </div>
                             <div class="plan2-texto">
                                 <h3>SEO ESENCIAL (Tecnicas que permiten que su web sea facilmente rastreado por Google)
@@ -364,9 +390,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div style="display:flex;">
-                            <div class="plan1-icono">
-                                <i class="fa-solid fa-arrow-down-up-lock" style="font-size: 70px;"></i>
+                        <div class="segundo-plan">
+                            <div class="plan2-icono2">
+                                <i class="fa-solid fa-arrow-down-up-lock"></i>
                             </div>
                             <div class="plan2-texto">
                                 <h3>SEGURIDAD WEB</h3>
@@ -405,8 +431,10 @@
                 </div>
             </div>
             <div class="cont-preguntas">
-                <div class="div-preguntas">
-                    <div>
+                <div class="div-preguntas" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
+                    <div class="preguntas">
                         <div style="padding: 10px 10px;">
                             <button onclick="ocultar()" class="btn-ocultaraparecer">
                                 <div class="div-iconospreguntas">
@@ -559,14 +587,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="img-preguntas">
+                <div class="img-preguntas" data-aos="fade-up" data-aos-anchor-placement="top-center">
                     <img src="img/undraw_questions_re_1fy7.svg" alt="">
                 </div>
             </div>
         </div>
-        <!-- /// -->
+        <!-- /FROMULARIO/ -->
         <div style="margin-top:50px;">
-            <h1 style="text-align: center; margin-bottom:10px; font-size: 40px;"> FORMULARIO DE 
+            <h1 style="text-align: center; margin-bottom:10px; font-size: 40px;"> FORMULARIO DE
                 <span>CONTACTO</span>
             </h1>
             <div style="width:30%; margin:auto; padding-bottom:70px;">
@@ -575,13 +603,16 @@
                 </marquee>
             </div>
         </div>
-        <div style="display:flex; justify-content:space-between;">
+        <div class="formulario1" style="display:flex; justify-content:space-between;">
             <div class="formulario">
-                <div class="formulario-inputs">
+                <div class="formulario-inputs" data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
                     <h1 style="margin:10px;">Ingrese sus datos AQUI</h1>
                     <div class="form-inputs">
                         <div>
-                            <input type="text" id="nombres" name="nombres" placeholder="Nombres*" style="width: 100%;" require>
+                            <input type="text" id="nombres" name="nombres" placeholder="Nombres*" style="width: 100%;"
+                                require>
                         </div>
                         <div style="display: flex; justify-content:space-between;">
                             <input type="text" id="paterno" name="paterno" placeholder="Apellido Paterno*"
@@ -590,25 +621,29 @@
                                 style="width:47%" require>
                         </div>
                         <div>
-                            <input type="email" id="email" name="email" placeholder="E-mail*" style="width: 100%;" require>
+                            <input type="email" id="email" name="email" placeholder="E-mail*" style="width: 100%;"
+                                require>
                             <div id="resultEmail"></div>
                         </div>
                         <div style="display: flex; justify-content:space-between;">
-                            <input type="text" id="dni" name="dni" maxlength="8" placeholder="Nro. de documento*" style="width:47%" require>
-                            <input type="text" id="celular" maxlength="9" name="celular" placeholder="Celular*" style="width:47%" require>
+                            <input type="text" id="dni" name="dni" maxlength="8" placeholder="Nro. de documento*"
+                                style="width:47%" require>
+                            <input type="text" id="celular" maxlength="9" name="celular" placeholder="Celular*"
+                                style="width:47%" require>
                         </div>
                         <div>
                             <textarea name="comentario" id="comentario" cols="30" rows="7" style="width:100%;"
                                 placeholder="Comentarios*"></textarea>
                         </div>
                         <div style="display: flex; justify-content:space-evenly;">
-                            <input type="checkbox" id="terminos" name="terminos" style="margin:auto;" onclick="checkBoton()">
+                            <input type="checkbox" id="terminos" name="terminos" style="margin:auto;"
+                                onclick="checkBoton()">
                             <p style="width:85%">Autorizo el tratamiento de mis datos según los términos contenidos en
                                 el siguiente enlace</p>
                         </div>
                         <div style="width:50%;" class="btn-form">
-                            <button onclick="clientes()"
-                            disabled style="width:100%; padding:10px; font-size:17px;" id="btnclientes" onsubmit="return validarCampos();">Enviar</button>
+                            <button onclick="clientes()" disabled style="width:100%; padding:10px; font-size:17px;"
+                                id="btnclientes" onsubmit="return validarCampos();">Enviar</button>
                         </div>
                         <div id="clientesRespuesta">
                         </div>
@@ -619,11 +654,12 @@
                     </div>
                 </div>
             </div>
-            <div style="width: 50%; display:flex; align-items:center;">
-                <img src="img/laptop.png" alt="" style="width: 100%; border-top-left-radius:50%; border-bottom-left-radius:50%;"">
+            <div class="imagen-form" style="width: 50%; display:flex; align-items:center;" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500"> 
+                <img src="img/laptop.png" alt=""
+                    style="width: 100%; border-top-left-radius:50%; border-bottom-left-radius:50%;">
             </div>
         </div>
-        <div style="margin: 50px 0px 0px 0px;">
+        <div style=" margin: 50px 0px 0px 0px;">
             <footer>
                 <div class="footer-contenedor">
                     <div class="footer-1">
@@ -632,7 +668,8 @@
                             <i class="fa-solid fa-computer"></i>
                         </div>
                         <div class="footer-1-b">
-                            <p>En esta página se reserva los derechos de autor para los creadores de este contendio</p>
+                            <p>En esta página se reserva los derechos de autor para los creadores de este contendio
+                            </p>
                         </div>
                         <div class="footer-1-c">
                             <textarea name="sugerencias" id="sugerencias" cols="27" rows="5"></textarea>
@@ -649,9 +686,15 @@
                                 $query = mysqli_query($cn,$sql);
                                 while($mostrar = mysqli_fetch_array($query)){
                             ?>
-                            <li class="lista1"><i class="fa-solid fa-location-dot"></i><p class="p-empresa"><?php echo $mostrar['direccion']; ?></p></li>
-                            <li class="lista1"><i class="fa-solid fa-phone-volume"></i><p class="p-empresa"><?php echo $mostrar['telefono']; ?></p></li>
-                            <li class="lista1"><i class="fa-regular fa-envelope"></i><p class="p-empresa"><?php echo $mostrar['correo']; ?></p></li>
+                            <li class="lista1"><i class="fa-solid fa-location-dot"></i>
+                                <p class="p-empresa"><?php echo $mostrar['direccion']; ?></p>
+                            </li>
+                            <li class="lista1"><i class="fa-solid fa-phone-volume"></i>
+                                <p class="p-empresa"><?php echo $mostrar['telefono']; ?></p>
+                            </li>
+                            <li class="lista1"><i class="fa-regular fa-envelope"></i>
+                                <p class="p-empresa"><?php echo $mostrar['correo']; ?></p>
+                            </li>
                             <?php } ?>
                         </div>
                     </div>
@@ -672,7 +715,7 @@
                     </div>
                 </div>
             </footer>
-            <div style="background: #222; ">
+            <div class="icono-contactos" style="background: #222; ">
                 <div class="iconos-final">
                     <i class="fa-brands fa-facebook-f"></i>
                     <i class="fa-brands fa-instagram"></i>
@@ -685,16 +728,15 @@
         <div class="derechos">
             <p>© Copyright 2023, Máster Web. Todos los derechos reservados.</p>
         </div>
-        <div style="display: flex; width: 14%; float:right;">
-            <div class="div-p">
-                <a class="btn-wassap" href="https://api.whatsapp.com/send?phone=947204863">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-                <p style="padding:10px; text-align:center; font-size:17px; font-weight:bold;">Escribanos ...</p>
-            </div>
-        </div>
+
+        <a href="https://api.whatsapp.com/send?phone=+947204863" class="btn-wsp" target="_blank">
+            <i class="fa fa-whatsapp icono"></i>
+        </a>
     </div>
     <script src="js/main.js"></script>
+    <script>
+    AOS.init();
+    </script>
 </body>
 
 </html>

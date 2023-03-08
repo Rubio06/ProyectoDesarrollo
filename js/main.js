@@ -56,7 +56,7 @@ function clientes(){
             btnCheck.disabled = true;
             btnCheck.style.background = "rgba(5, 5, 59, 0.59)";
 
-            setInterval(()=>{
+            setTimeout(()=>{
                 document.getElementById("clientesRespuesta").innerHTML = "";
             },3000)
         }
@@ -126,3 +126,36 @@ function ocultar3(){
     parrafo3.classList.toggle("desaparecer");
     document.querySelector(".div-iconospreguntas3 i").classList.toggle("fa-circle-arrow-down");
 }
+
+//MENU HAMBURGESA 1
+let btnAbrir = document.getElementById("btnAbrir");
+let primerNav1 = document.getElementById("primerNav1");
+let btnCerrar = document.getElementById("btnCerrar");
+
+
+btnAbrir.addEventListener("click", ()=>{
+    primerNav1.classList.add("visible");
+});
+
+btnCerrar.addEventListener("click", ()=>{
+    primerNav1.classList.remove("visible");
+
+});
+
+//MENU HAMBURGESA 2
+let btnabrirdos = document.getElementById("btn-Abrir2");
+let ul = document.getElementById("ul");
+let btncerrardos = document.getElementById("btn-cerrar2");
+
+
+btnabrirdos.addEventListener("click", ()=>{
+    ul.classList.add("visible2");
+
+});
+
+btncerrardos.addEventListener("click", ()=>{
+    ul.classList.remove("visible2");
+});
+
+
+
