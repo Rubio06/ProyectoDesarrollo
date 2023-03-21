@@ -131,12 +131,9 @@ function ocultar3(){
 let btnAbrir = document.getElementById("btnAbrir");
 let primerNav1 = document.getElementById("primerNav1");
 let btnCerrar = document.getElementById("btnCerrar");
-
-
 btnAbrir.addEventListener("click", ()=>{
     primerNav1.classList.add("visible");
 });
-
 btnCerrar.addEventListener("click", ()=>{
     primerNav1.classList.remove("visible");
 

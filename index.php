@@ -431,9 +431,7 @@
                 </div>
             </div>
             <div class="cont-preguntas">
-                <div class="div-preguntas" data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+                <div class="div-preguntas" data-aos="fade-right"data-aos-offset="300"data-aos-easing="ease-in-sine">
                     <div class="preguntas">
                         <div style="padding: 10px 10px;">
                             <button onclick="ocultar()" class="btn-ocultaraparecer">

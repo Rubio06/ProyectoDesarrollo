@@ -858,6 +858,7 @@ h1 span{
 .btn-Abrir, .btn-Abrir2,.btn-cerrar2{
     display: none;
     border: none;
+    cursor: pointer;
 }
 .titulo-ul2{
     display: none;
@@ -892,7 +893,7 @@ h1 span{
 }
 
 /* RESPONSE */
-@media only screen and (min-width: 280px) and (max-width: 499px) {
+@media only screen and (min-width: 200px) and (max-width: 499px) {
     body,html{
         width: 100%;
         margin: auto;
@@ -3297,33 +3298,6 @@ h1 span{
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .btn-wsp{
     position:fixed;
