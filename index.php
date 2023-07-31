@@ -25,6 +25,9 @@
 
 <body>
     <?php include("modal.php"); ?>
+    <div class="progre-principal">
+        <div id="progreBarra" class="progreBarra"></div>
+    </div>
     <div class="container">
         <div class="div-header">
             <nav class="nav-uls">
@@ -603,9 +606,7 @@
         </div>
         <div class="formulario1" style="display:flex; justify-content:space-between;">
             <div class="formulario">
-                <div class="formulario-inputs" data-aos="fade-right"
-     data-aos-offset="300"
-     data-aos-easing="ease-in-sine">
+                <div class="formulario-inputs" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                     <h1 style="margin:10px;">Ingrese sus datos AQUI</h1>
                     <div class="form-inputs">
                         <div>
@@ -727,6 +728,7 @@
             <p>© Copyright 2023, Máster Web. Todos los derechos reservados.</p>
         </div>
 
+        
         <a href="https://api.whatsapp.com/send?phone=+947204863" class="btn-wsp" target="_blank">
             <i class="fa fa-whatsapp icono"></i>
         </a>

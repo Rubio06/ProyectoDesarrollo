@@ -133,10 +133,12 @@ let primerNav1 = document.getElementById("primerNav1");
 let btnCerrar = document.getElementById("btnCerrar");
 btnAbrir.addEventListener("click", ()=>{
     primerNav1.classList.add("visible");
+    primerNav1.style.animation = "aparecer1 2s forwards";
+
 });
 btnCerrar.addEventListener("click", ()=>{
     primerNav1.classList.remove("visible");
-
+    primerNav1.style.animation = "aparecer1 2s forwards";
 });
 
 //MENU HAMBURGESA 2
@@ -147,12 +149,34 @@ let btncerrardos = document.getElementById("btn-cerrar2");
 
 btnabrirdos.addEventListener("click", ()=>{
     ul.classList.add("visible2");
-
+    ul.style.animation = "aparecer 2s forwards";
 });
 
 btncerrardos.addEventListener("click", ()=>{
     ul.classList.remove("visible2");
+    ul.style.animation = "aparecer 2s forwards";
+
 });
+
+//BARRADE DE PPROGRESO
+
+const barraProgre = document.getElementById("progreBarra");
+const contenedor = document.querySelector(".container");
+
+const animacionProgreBarra = ()=>{
+    let scrollBarra = -contenedor.getBoundingClientRect().top;
+    let progreWidth = (scrollBarra / (contenedor.getBoundingClientRect().height - document.documentElement.clientHeight)) * 100;
+    
+    let value = Math.floor(progreWidth);
+    // console.log(value);
+    
+    barraProgre.style.width = `${value}%`;
+
+    if (value < 0) {
+        return (barraProgre.style.width = '0%');
+    }
+}
+window.addEventListener('scroll', animacionProgreBarra);
 
 
 
